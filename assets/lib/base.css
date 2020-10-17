@@ -1,0 +1,69 @@
+/* 去除浏览器默认内外边距 */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* CSS3盒模型 */
+    box-sizing: border-box;
+}
+
+input,
+button,
+textarea {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+textarea {
+    resize: none;
+}
+
+
+/* 去除a标签下划线 */
+
+a {
+    text-decoration: none;
+}
+
+
+/* 去除li标签的小圆点 */
+
+li {
+    list-style: none;
+}
+
+
+/* 去除图片底部3px间隙的问题 */
+
+img {
+    vertical-align: middle;
+}
+
+
+/* 清除浮动 */
+
+.clearfix:after {
+    content: '';
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/* 浮动 */
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
