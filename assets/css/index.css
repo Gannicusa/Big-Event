@@ -1,3 +1,47 @@
 #welcome {
     border-bottom: 2px solid black;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    user-select: none;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+
+}
+
+.layui-body {
+    overflow-y: hidden;
+}
+
+a {
+    transition: none !important;
+}
+
+.layui-icon {
+    margin-right: 5px;
+}
+
+.layui-nav-child dd {
+    padding-left: 20px;
+}
+
+#namepic {
+    display: inline-block;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    background-color: #fff;
+    vertical-align: middle;
+    color: black;
+}
+
+.layui-footer {
+    text-align: center;
 }
