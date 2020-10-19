@@ -28,12 +28,14 @@
                         个人中心
                     </a>
                     <dl class="layui-nav-child">
-                        <dd><a href="">基本资料</a></dd>
-                        <dd><a href="">更换头像</a></dd>
-                        <dd><a href="">密码重置</a></dd>
+                        <dd><a target="fm" href="/user/user_info.html">基本资料</a></dd>
+                        <dd><a target="fm" href="/user/user_avatar.html">更换头像</a></dd>
+                        <dd><a target="fm" href="/user/user_pwd.html">密码重置</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"><a href=""> <i class="layui-icon layui-icon-logout"></i>退出</a></li>
+                <li id="outbtn" class="layui-nav-item"><a href="javascript:;"> <i
+                            class="layui-icon layui-icon-logout"></i>退出</a>
+                </li>
             </ul>
         </div>
 
@@ -63,9 +65,12 @@
                     <li class="layui-nav-item">
                         <a href="javascript:;"><i class="layui-icon layui-icon-username"></i>个人中心</a>
                         <dl class="layui-nav-child">
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-tabs"></i>基本资料</a></dd>
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-tabs"></i>更换头像</a></dd>
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-tabs"></i>重置密码</a></dd>
+                            <dd><a target="fm" href="/user/user_info.html"><i
+                                        class="layui-icon layui-icon-tabs"></i>基本资料</a></dd>
+                            <dd><a target="fm" href="/user/user_avatar.html"><i
+                                        class="layui-icon layui-icon-tabs"></i>更换头像</a></dd>
+                            <dd><a target="fm" href="/user/user_pwd.html"><i
+                                        class="layui-icon layui-icon-tabs"></i>重置密码</a></dd>
                         </dl>
                     </li>
                 </ul>
