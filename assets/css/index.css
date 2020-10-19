@@ -45,3 +45,8 @@ a {
 .layui-footer {
     text-align: center;
 }
+
+.layui-nav-img {
+    height: 50px;
+    width: 50px;
+}
