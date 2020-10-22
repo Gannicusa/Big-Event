@@ -33,8 +33,6 @@ $(function () {
                 layer.msg('更新密码成功')
                 $('.layui-form')[0].reset();
             }
-
         })
     })
-
 })
