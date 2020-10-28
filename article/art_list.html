@@ -79,8 +79,8 @@
       <td>{{$value.pub_date|formDate}}</td>
       <td>{{$value.state}}</td>
       <td>
-        <button type="button" class="layui-btn layui-btn-xs">编辑</button>
-        <button type="button" class="layui-btn layui-btn-danger layui-btn-xs btn-delete" data-id="{{$value.Id}}">删除</button>
+        <button id="edit_btn" type="button" class="layui-btn layui-btn-xs" data-id="{{$value.Id}}"><a href="/article/art_edit.html" target='fm'>编辑</a></button>
+        <button type="button" class="removebtn layui-btn layui-btn-danger layui-btn-xs btn-delete" data-id="{{$value.Id}}">删除</button>
       </td>
     </tr>
   {{/each}}

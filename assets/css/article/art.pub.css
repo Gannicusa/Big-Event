@@ -1,0 +1,59 @@
+html,
+body {
+    margin: 0;
+    padding: 10px;
+    background-color: #ccc;
+}
+
+.bigpic {
+    width: 400px;
+    height: 280px;
+    background-color: #ccc;
+}
+
+.bigpic img {
+    height: 100%;
+}
+
+.picbox {
+    display: flex;
+
+}
+
+.rightbox {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 280px;
+    position: relative;
+}
+
+.rightbox .preview-md {
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+    background-color: #ccc;
+}
+
+.preview-sd {
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    width: 100px;
+    height: 70px;
+}
+
+#choosepic {
+    display: inline-block;
+    width: 80px;
+    margin-top: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+#filechoose {
+    margin-top: 50px;
+    display: none;
+}

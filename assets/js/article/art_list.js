@@ -43,6 +43,7 @@ $(function () {
                 if (res.status !== 0) {
                     return layer.msg('获取数据失败！')
                 }
+                // console.log(res);
                 var liststr = template('tem_list', res);
                 $('tbody').html(liststr);
                 page(res.total);
@@ -80,9 +81,15 @@ $(function () {
         laypage.render({
             elem: 'pageBox',
             count: total,
+            limits: [2, 3, 5, 8, 10],
             limit: q.pagesize,
+
             curr: q.pagenum,
+            layout: ['count', 'limit', 'prev', 'page', 'next', 'skip'],
             jump: function (obj, first) {
+                // console.log(q);
+                // console.log(obj.limit);
+                q.pagesize = obj.limit;
                 q.pagenum = obj.curr;
                 if (!first) {
                     getlist();
@@ -90,4 +97,35 @@ $(function () {
             }
         });
     }
+
+    $('tbody').on('click', '.removebtn', function () {
+        var num = $('.removebtn').length;
+        console.log(num);
+        var id = $(this).attr('data-id');
+        $.ajax({
+            method: "get",
+            url: "/my/article/delete/" + id,
+            success: function (res) {
+                if (res.status !== 0) {
+                    return layer.msg('删除文章失败！')
+                }
+                layer.msg('删除文章成功');
+                if (num == 1) {
+                    q.pagenum = q.pagenum == 1 ? 1 : q.pagenum - 1
+                }
+                getlist();
+            }
+        })
+    })
+
+
+
+    $('body').on('click', '#edit_btn', function () {
+        var art_id = $(this).attr('data-Id');
+        console.log(art_id);
+        localStorage.removeItem('art_id');
+        localStorage.setItem('art_id', art_id)
+    })
+
+
 })

@@ -16,8 +16,9 @@ $(function () {
         if (picfile.length == 0) {
             return layer.msg('请选择照片！')
         }
-        console.log(picfile);
+        console.log(picfile[0]);
         var imageurl = URL.createObjectURL(picfile[0]);
+        console.log(imageurl);
         $image.cropper('destroy').attr('src', imageurl).cropper(options);
     })
 
